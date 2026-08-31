@@ -1,0 +1,22 @@
+# .dockerignore for the commit-image build (mayhem/Dockerfile).
+# Goal: bake in the FULL repo (including .git history — the grader uses it), dropping only local
+# build artifacts and editor/OS cruft. Dev image, not minimal.
+#
+# Additive file — upstream lunasvg ships no .dockerignore of its own.
+
+# ── Build outputs / local cruft ──────────────────────────────────────────────
+# mayhem/build.sh builds into build-fuzz/ and build-oracle/ at build time inside the image; keep
+# them (and upstream's own /build, already in upstream .gitignore) out of the build CONTEXT.
+build/
+build-fuzz/
+build-oracle/
+*.o
+*.a
+*.so
+*.dylib
+**/__pycache__/
+
+# ── Editor / OS noise ────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+*~

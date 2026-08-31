@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="80" viewBox="0 0 150 80">
+  <defs>
+    <g id="shape">
+      <rect width="20" height="20" fill="orange"/>
+      <circle cx="10" cy="10" r="5" fill="purple"/>
+    </g>
+  </defs>
+  <use href="#shape" x="0" y="0"/>
+  <use href="#shape" x="40" y="20"/>
+  <use href="#shape" x="80" y="40"/>
+</svg>
