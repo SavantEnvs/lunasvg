@@ -1,0 +1,10 @@
+project: savantenvs/lunasvg
+target: fuzz_lunasvg
+
+cmds:
+  - cmd: /mayhem/fuzz_lunasvg
+    libfuzzer: true
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_lunasvg/testsuite
